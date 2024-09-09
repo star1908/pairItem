@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="优化计算，实现分数的乘除法">
+    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="计算注释">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/pair/AnswerCheck/ResultComputationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pair/AnswerCheck/ResultComputationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,7 @@
       <recent name="com.pair.CreateProblem" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.Main">
+  <component name="RunManager" selected="JUnit.ResultComputationTest.result">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pair.Main" />
       <module name="pairItem" />
@@ -127,8 +129,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.Main" />
         <item itemvalue="JUnit.ResultComputationTest.result" />
+        <item itemvalue="应用程序.Main" />
         <item itemvalue="JUnit.ProblemAnalysisTest.create" />
       </list>
     </recent_temporary>
@@ -152,7 +154,8 @@
       <workItem from="1725853091679" duration="40000" />
       <workItem from="1725853135701" duration="55000" />
       <workItem from="1725853202122" duration="4446000" />
-      <workItem from="1725861270031" duration="14831000" />
+      <workItem from="1725861270031" duration="14896000" />
+      <workItem from="1725881936327" duration="5997000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -194,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725881057430</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="计算注释">
+      <option name="closed" value="true" />
+      <created>1725881640906</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725881640906</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +217,7 @@
     <MESSAGE value="设置符号常类，生成随机数功能" />
     <MESSAGE value="优化计算，实现分数的加减法" />
     <MESSAGE value="优化计算，实现分数的乘除法" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化计算，实现分数的乘除法" />
+    <MESSAGE value="计算注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="计算注释" />
   </component>
 </project>

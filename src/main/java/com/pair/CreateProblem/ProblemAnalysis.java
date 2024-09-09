@@ -33,11 +33,11 @@ public class ProblemAnalysis {
                     sj.add(String.valueOf(num1))
                       .add(opera)
                       .add(String.valueOf(num2))
-                            .add("÷ 9 × 7")
+                            .add("÷ 9 ÷ 2")
             );
 
-            int result = ResultComputation.result(String.valueOf(sj));
-            System.out.println(result);
+            String result = ResultComputation.result(String.valueOf(sj));
+            System.out.println("结果为：" + result);
         }
     }
 }
