@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="文件的输入与输出">
+    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="解析计算字符串运算式">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +40,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "JUnit.ProblemAnalysisTest.create.executor": "Run",
+    "JUnit.ResultComputationTest.result.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -69,10 +69,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.pair.AnswerCheck" />
       <recent name="com.pair.CreateProblem" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.Main">
+  <component name="RunManager" selected="JUnit.ResultComputationTest.result">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pair.Main" />
       <module name="pairItem" />
@@ -103,12 +104,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ResultComputationTest.result" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pairItem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pair.AnswerCheck.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pair.AnswerCheck" />
+      <option name="MAIN_CLASS_NAME" value="com.pair.AnswerCheck.ResultComputationTest" />
+      <option name="METHOD_NAME" value="result" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="JUnit.ResultComputationTest.result" />
       <item itemvalue="JUnit.ProblemAnalysisTest.create" />
       <item itemvalue="应用程序.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ResultComputationTest.result" />
         <item itemvalue="应用程序.Main" />
         <item itemvalue="JUnit.ProblemAnalysisTest.create" />
       </list>
@@ -133,7 +152,7 @@
       <workItem from="1725853091679" duration="40000" />
       <workItem from="1725853135701" duration="55000" />
       <workItem from="1725853202122" duration="4446000" />
-      <workItem from="1725861270031" duration="3462000" />
+      <workItem from="1725861270031" duration="13244000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -151,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725857376529</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="设置符号常类，生成随机数功能">
+      <option name="closed" value="true" />
+      <created>1725864910859</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725864910859</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +187,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化" />
     <MESSAGE value="文件的输入与输出" />
-    <option name="LAST_COMMIT_MESSAGE" value="文件的输入与输出" />
+    <MESSAGE value="设置符号常类，生成随机数功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="设置符号常类，生成随机数功能" />
   </component>
 </project>
