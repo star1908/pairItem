@@ -37,10 +37,23 @@ public class ResultComputation {
                         arr[i + 1] = String.valueOf(Integer.parseInt(arr[i - 1]) - Integer.parseInt(arr[i + 1]));
                         break;
                     case MUL:
-                        arr[i + 1] = String.valueOf(Integer.parseInt(arr[i - 1]) * Integer.parseInt(arr[i + 1]));
+                        if(strArr.length != 1 && strArr1.length != 1) {
+                            strArr[1] = String.valueOf(Integer.parseInt(strArr[1]) * Integer.parseInt(strArr1[1]));
+                            strArr1 = new String[]{strArr1[0]};
+                        }
+                        arr[i + 1] = String.valueOf(Integer.parseInt(strArr[0]) * Integer.parseInt(strArr1[0]));
                         break;
                     case DIV:
-                        arr[i + 1] = arr[i - 1] + "/" + arr[i + 1];
+                        if(strArr1.length != 1) {
+                            strArr1 = new String[]{strArr1[1], strArr1[0]};
+
+                            if(strArr.length != 1) {
+                                strArr[1] = String.valueOf(Integer.parseInt(strArr[1]) * Integer.parseInt(strArr1[1]));
+                                strArr1 = new String[]{strArr1[0]};
+                            }
+                            arr[i + 1] = String.valueOf(Integer.parseInt(strArr[0]) * Integer.parseInt(strArr1[0]));
+                        }
+                        else arr[i + 1] = arr[i - 1] + "/" + arr[i + 1];
                         break;
                 }
 
