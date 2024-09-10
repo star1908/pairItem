@@ -28,7 +28,12 @@ public class ProblemAnalysis {
 
             // 生成随机数1
             int num1 = random.nextInt(scope);
-            sj.add(String.valueOf(num1));
+            int n20 = random.nextInt(9) + 1;
+            int n10 = random.nextInt(n20 - 1 == 0 ? 1 : n20 - 1) + 1;
+
+            int n30 = n10 + num1 * n20;
+
+            sj.add(ResultComputation.Simplify(n30 + "/" + n20));
 
             for (int j = 0; j < random.nextInt(3) + 1; j++){
                 // 随机选择运算符
@@ -37,7 +42,15 @@ public class ProblemAnalysis {
                 int num2 = random.nextInt( Objects.equals(opera, DIV) ? scope - 1 :scope);
                 if(Objects.equals(opera, DIV)) num2 += 1;
 
-                sj.add(opera).add(String.valueOf(num2));
+                int n2 = random.nextInt(9) + 1;
+                int n1 = random.nextInt(n2 - 1 == 0 ? 1 : n2 - 1) + 1;
+
+                int n3 = n1 + num2 * n2;
+
+                // 真分数转假分数，调用函数转真分数同时化简
+                String str = ResultComputation.Simplify(n3 + "/" + n2);
+
+                sj.add(opera).add(str);
             }
 
             String result = ResultComputation.result(String.valueOf(sj));

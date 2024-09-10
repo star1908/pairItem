@@ -11,9 +11,24 @@ public class ResultComputation {
     public static String result(String opera){
         // 分割字符串
         String[] arr = opera.split(" ");
+        String[] operaArr = new String[]{ MUL, DIV, ADD, SUB };
+
+        // 解析数字，由真分数转假分数
+        for(int k = 0; k < arr.length; k++){
+            String[] ar = arr[k].split("'");
+            if(ar.length != 1
+                    && !Objects.equals(ar[0],operaArr[0])
+                    && !Objects.equals(ar[0],operaArr[1])
+                    && !Objects.equals(ar[0],operaArr[2])
+                    && !Objects.equals(ar[0],operaArr[3])
+            ) {
+                String[] ar2 = ar[1].split("/");
+                ar[0] = String.valueOf(Integer.parseInt(ar[0]) * Integer.parseInt(ar2[1]));
+                arr[k] = Integer.parseInt(ar[0]) + Integer.parseInt(ar2[0]) + "/" + ar2[1];
+            }
+        }
         lsArr = arr;
 
-        String[] operaArr = new String[]{ MUL, DIV, ADD, SUB };
 
         for(int oi = 0; oi < operaArr.length; oi += 2){
 
