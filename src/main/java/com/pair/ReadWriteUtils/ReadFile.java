@@ -22,7 +22,7 @@ public class ReadFile {
         try {
             // 使用Scanner类读取文件内容
             Scanner scanner = new Scanner(file);
-            ArrayList<String> arrayList = new ArrayList<String>();
+            ArrayList<String> arrayList = new ArrayList<>();
 
             // 逐行读取文件内容并追加到StringBuilder对象中
             while (scanner.hasNextLine()) {

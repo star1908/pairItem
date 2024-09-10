@@ -56,7 +56,6 @@ public class ProblemAnalysis {
             String result = ResultComputation.result(String.valueOf(sj));
             System.out.println("题目为：" + sj);
             System.out.println("结果为：" + result);
-            System.out.println();
             if (Integer.parseInt(result.split("['/]")[0]) < 0) create(1,scope);
             else {
                 proArr.add(String.valueOf(sj));
@@ -64,7 +63,7 @@ public class ProblemAnalysis {
             }
         }
 
-        OutputFile.Output(proArr.toArray(new String[0]),"D:/test/tt.txt");
-        OutputFile.Output(strArr.toArray(new String[0]),"D:/test/tf.txt");
+        OutputFile.Output(proArr.toArray(new String[0]),"Exercises.txt");
+        OutputFile.Output(strArr.toArray(new String[0]),"Answers.txt");
     }
 }
