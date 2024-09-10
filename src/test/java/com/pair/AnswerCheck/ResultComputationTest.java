@@ -8,6 +8,6 @@ class ResultComputationTest {
 
     @Test
     void result() {
-        ResultComputation.result("16 ÷ 16 + 14 - 5 = ");
+        ResultComputation.result("0 - 7 = ");
     }
 }

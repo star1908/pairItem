@@ -12,6 +12,7 @@ public class ResultComputation {
     public static String result(String opera){
         // 分割字符串
         String[] arr = opera.split(" ");
+        lsArr = arr;
 
         String[] operaArr = new String[]{ MUL, DIV, ADD, SUB };
 

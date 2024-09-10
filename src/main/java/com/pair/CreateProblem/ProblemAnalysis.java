@@ -25,7 +25,7 @@ public class ProblemAnalysis {
             int num1 = random.nextInt(scope);
             sj.add(String.valueOf(num1));
 
-            for (int j = 0; j < 3; j++){
+            for (int j = 0; j < random.nextInt(3) + 1; j++){
                 // 随机选择运算符
                 String opera = OPERATOR[random.nextInt(4)];
                 // 生成随机数2，非零判断及零不作分母判断
