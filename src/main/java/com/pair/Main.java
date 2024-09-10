@@ -2,6 +2,7 @@ package com.pair;
 
 import com.pair.AnswerCheck.ResultCheck;
 import com.pair.CreateProblem.ProblemAnalysis;
+import com.pair.Exception.InsufficientParametersException;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -9,7 +10,6 @@ import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        // String[] arr = ReadFile.Read("D:/test/tt.txt");
 
         String[] argsArr = new String[]{ "", "", "", "" };
         argsArr[0] = "1";
@@ -36,11 +36,9 @@ public class Main {
             }
         }
 
-//        if(!Objects.equals(argsArr[1], ""))ProblemAnalysis.create(Integer.parseInt(argsArr[0]),Integer.parseInt(argsArr[1]));
-//        else System.out.println("命令行未输入数值范围，请加上“ -r [数值] ”再次运行程序。");
+        if(!Objects.equals(argsArr[1], ""))ProblemAnalysis.create(Integer.parseInt(argsArr[0]),Integer.parseInt(argsArr[1]));
+        else throw new InsufficientParametersException("命令行未输入数值范围，请加上“ -r [数值] ”再次运行程序。");
 
         ResultCheck.Check(argsArr[2],argsArr[3]);
-
-        // OutputFile.Output(arr,"D:/test/tf.txt");
     }
 }
