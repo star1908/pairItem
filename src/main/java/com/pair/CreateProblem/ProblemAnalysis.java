@@ -23,18 +23,20 @@ public class ProblemAnalysis {
 
             // 生成随机数1
             int num1 = random.nextInt(scope);
-            // 随机选择运算符
-            String opera = OPERATOR[random.nextInt(4)];
-            // 生成随机数2，非零判断及零不作分母判断
-            int num2 = random.nextInt(Objects.equals(opera, SUB) ? num1 : Objects.equals(opera, DIV) ? scope - 1 :scope);
-            if(Objects.equals(opera, DIV)) num2 += 1;
+            sj.add(String.valueOf(num1));
 
-            System.out.println(
-                    sj.add(String.valueOf(num1))
-                      .add(opera)
-                      .add(String.valueOf(num2))
-                            .add("÷ 9 ÷ 2")
-            );
+            for (int j = 0; j < 3; j++){
+                // 随机选择运算符
+                String opera = OPERATOR[random.nextInt(4)];
+                // 生成随机数2，非零判断及零不作分母判断
+                int num2 = random.nextInt( Objects.equals(opera, DIV) ? scope - 1 :scope);
+                if(Objects.equals(opera, DIV)) num2 += 1;
+
+                System.out.println(
+                        sj.add(opera)
+                          .add(String.valueOf(num2))
+                );
+            }
 
             String result = ResultComputation.result(String.valueOf(sj));
             System.out.println("结果为：" + result);
