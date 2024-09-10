@@ -37,14 +37,13 @@ public class ProblemAnalysis {
                 int num2 = random.nextInt( Objects.equals(opera, DIV) ? scope - 1 :scope);
                 if(Objects.equals(opera, DIV)) num2 += 1;
 
-                System.out.println(
-                        sj.add(opera)
-                          .add(String.valueOf(num2))
-                );
+                sj.add(opera).add(String.valueOf(num2));
             }
 
             String result = ResultComputation.result(String.valueOf(sj));
+            System.out.println("题目为：" + sj);
             System.out.println("结果为：" + result);
+            System.out.println();
             if (Integer.parseInt(result.split("['/]")[0]) < 0) create(1,scope);
             else {
                 proArr.add(String.valueOf(sj));

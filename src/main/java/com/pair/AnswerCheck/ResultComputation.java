@@ -94,7 +94,7 @@ public class ResultComputation {
                             n++;
                         }
                     }
-                    System.out.println("数组："+Arrays.toString(lsArr));
+                    // System.out.println("数组："+Arrays.toString(lsArr));
 
                 }
 
@@ -103,7 +103,7 @@ public class ResultComputation {
             arr = lsArr;
 
         }
-        System.out.println(Simplify(arr[arr.length - 2]));
+        // System.out.println(Simplify(arr[arr.length - 2]));
         return Simplify(arr[arr.length - 2]);
     }
 
