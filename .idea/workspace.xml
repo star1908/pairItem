@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="化简分号，新增运算式到三个运算符">
+    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="修复bug，计算功能基本完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/pair/AnswerCheck/ResultComputationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pair/AnswerCheck/ResultComputationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +44,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "JUnit.ProblemAnalysisTest.create.executor": "Run",
-    "JUnit.ResultComputationTest.result.executor": "Run",
+    "JUnit.ResultComputationTest.result.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -134,8 +135,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.Main" />
-        <item itemvalue="JUnit.ResultComputationTest.result" />
         <item itemvalue="JUnit.ProblemAnalysisTest.create" />
+        <item itemvalue="JUnit.ResultComputationTest.result" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +161,7 @@
       <workItem from="1725853202122" duration="4446000" />
       <workItem from="1725861270031" duration="14896000" />
       <workItem from="1725881936327" duration="6570000" />
-      <workItem from="1725925631912" duration="2117000" />
+      <workItem from="1725925631912" duration="4985000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -226,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725927251650</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="修复bug，计算功能基本完成">
+      <option name="closed" value="true" />
+      <created>1725927820875</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725927820875</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +250,7 @@
     <MESSAGE value="计算注释" />
     <MESSAGE value="实现先乘除后加减" />
     <MESSAGE value="化简分号，新增运算式到三个运算符" />
-    <option name="LAST_COMMIT_MESSAGE" value="化简分号，新增运算式到三个运算符" />
+    <MESSAGE value="修复bug，计算功能基本完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复bug，计算功能基本完成" />
   </component>
 </project>

@@ -1,7 +1,10 @@
 package com.pair.CreateProblem;
 
 import com.pair.AnswerCheck.ResultComputation;
+import com.pair.ReadWriteUtils.OutputFile;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
 import java.util.StringJoiner;
@@ -15,8 +18,10 @@ public class ProblemAnalysis {
     public static final String[] OPERATOR={ADD,SUB,MUL,DIV};
     public static final String EQU = " = ";
     public static final String SLA = "/";
+    public static final ArrayList<String> strArr = new ArrayList<>();
+    public static final ArrayList<String> proArr = new ArrayList<>();
 
-    public static void create(int loop,int scope){
+    public static void create(int loop,int scope) throws IOException {
         for(int i = 0; i < loop; i++){
             Random random = new Random();
             StringJoiner sj = new StringJoiner(" ","",EQU);
@@ -40,6 +45,14 @@ public class ProblemAnalysis {
 
             String result = ResultComputation.result(String.valueOf(sj));
             System.out.println("结果为：" + result);
+            if (Integer.parseInt(result.split("['/]")[0]) < 0) create(1,scope);
+            else {
+                proArr.add(String.valueOf(sj));
+                strArr.add(result);
+            }
         }
+
+        OutputFile.Output(proArr.toArray(new String[0]),"D:/test/tt.txt");
+        OutputFile.Output(strArr.toArray(new String[0]),"D:/test/tf.txt");
     }
 }

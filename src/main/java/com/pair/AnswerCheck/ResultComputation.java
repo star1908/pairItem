@@ -7,7 +7,6 @@ import static com.pair.CreateProblem.ProblemAnalysis.*;
 
 public class ResultComputation {
     public static String[] lsArr = new String[0];
-    public static int cs = 0;
 
     public static String result(String opera){
         // 分割字符串
@@ -112,6 +111,7 @@ public class ResultComputation {
         String[] strArr = str.split("/");
 
         if(strArr.length != 1) {
+            if(Integer.parseInt(strArr[0]) < 0) return "-1";
             // 计算自然数
             int num0 = Integer.parseInt(strArr[0]) / Integer.parseInt(strArr[1]);
 
@@ -126,8 +126,15 @@ public class ResultComputation {
                 y = r;
             }
 
-            String res = num0 + "'" + Integer.parseInt(strArr[0]) / x + "/" + Integer.parseInt(strArr[1]) / x;
+            int num1 = Integer.parseInt(strArr[0]) / x;
+            int num2 = Integer.parseInt(strArr[1]) / x;
+
+            // 拼接形式 num0'num1/num2
+            String res = num0 + "'" + num1 + "/" + num2;
+            // 结果分子为零时，仅返回自然数部分
             if(Integer.parseInt(strArr[0]) / x == 0) res = String.valueOf(num0);
+            // 自然数为零时，返回分数部分
+            if(num0 == 0) res = num1 + "/" + num2;
 
             return res;
         }

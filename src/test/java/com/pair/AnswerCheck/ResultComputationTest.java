@@ -8,6 +8,6 @@ class ResultComputationTest {
 
     @Test
     void result() {
-        ResultComputation.result("0 - 7 = ");
+        ResultComputation.result("3 ÷ 7 = ");
     }
 }
