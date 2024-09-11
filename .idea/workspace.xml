@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="抛命令行范围未输入异常">
+    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="代码整理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Answers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Answers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercises.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Exercises.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grade.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Grade.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +17,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -50,6 +44,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "JUnit.ProblemAnalysisTest.create.executor": "Run",
+    "JUnit.ProblemCheckTest.check.executor": "Run",
     "JUnit.ResultComputationTest.result.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -83,11 +78,11 @@
       <recent name="com.pair.CreateProblem" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.pair.AnswerCheck" />
       <recent name="com.pair.CreateProblem" />
+      <recent name="com.pair.AnswerCheck" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.Main">
+  <component name="RunManager" selected="JUnit.ProblemCheckTest.check">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pair.Main" />
       <module name="pairItem" />
@@ -118,6 +113,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProblemCheckTest.check" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pairItem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pair.CreateProblem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.pair.CreateProblem" />
+      <option name="MAIN_CLASS_NAME" value="com.pair.CreateProblem.ProblemCheckTest" />
+      <option name="METHOD_NAME" value="check" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ResultComputationTest.result" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="pairItem" />
       <extension name="coverage">
@@ -135,12 +146,14 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.ProblemCheckTest.check" />
       <item itemvalue="JUnit.ResultComputationTest.result" />
       <item itemvalue="JUnit.ProblemAnalysisTest.create" />
       <item itemvalue="应用程序.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProblemCheckTest.check" />
         <item itemvalue="JUnit.ResultComputationTest.result" />
         <item itemvalue="JUnit.ProblemAnalysisTest.create" />
       </list>
@@ -169,7 +182,8 @@
       <workItem from="1725881936327" duration="6570000" />
       <workItem from="1725925631912" duration="11727000" />
       <workItem from="1725957068449" duration="771000" />
-      <workItem from="1725961856891" duration="706000" />
+      <workItem from="1725961856891" duration="744000" />
+      <workItem from="1726013265730" duration="3084000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -283,7 +297,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725944878916</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="代码整理">
+      <option name="closed" value="true" />
+      <created>1725962582091</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1725962582091</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +325,7 @@
     <MESSAGE value="运算式生成分数功能" />
     <MESSAGE value="判定对错统计功能" />
     <MESSAGE value="抛命令行范围未输入异常" />
-    <option name="LAST_COMMIT_MESSAGE" value="抛命令行范围未输入异常" />
+    <MESSAGE value="代码整理" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码整理" />
   </component>
 </project>

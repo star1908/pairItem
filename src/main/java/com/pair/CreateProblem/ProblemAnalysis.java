@@ -58,10 +58,12 @@ public class ProblemAnalysis {
             System.out.println("题目为：" + sj);
             System.out.println("结果为：" + result);
             if (Integer.parseInt(result.split("['/]")[0]) < 0) create(1, scope);
+            else if (ProblemCheck.CheckRes(resArr.toArray(new String[0]), result)) create(1, scope);
             else {
                 proArr.add(String.valueOf(sj));
                 resArr.add(result);
             }
+
         }
 
         OutputFile.Output(proArr.toArray(new String[0]), "Exercises.txt");
