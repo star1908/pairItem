@@ -1,6 +1,8 @@
 package com.pair.AnswerCheck;
 
+import java.util.Arrays;
 import java.util.Objects;
+import java.util.StringJoiner;
 
 import static com.pair.CreateProblem.ProblemAnalysis.*;
 
@@ -10,6 +12,9 @@ public class ResultComputation {
     public static String result(String opera) {
         // 分割字符串
         String[] arr = opera.split(" ");
+
+        if (Objects.equals(arr[arr.length - 1], EQU)) arr = Arrays.copyOf(arr, arr.length - 1);
+
         String[] operaArr = new String[]{MUL, DIV, ADD, SUB};
 
         // 解析数字，由真分数转假分数
@@ -28,6 +33,46 @@ public class ResultComputation {
         }
         lsArr = arr;
 
+        int km = 0, lm = 0;
+        for (int k = 0; k < arr.length; k++) {
+            if (Objects.equals(arr[k], "(")) {
+                km = k;
+                break;
+            }
+        }
+        for (int l = km + 1; l < arr.length; l++) {
+            if (Objects.equals(arr[l], ")")) {
+                lm = l;
+                break;
+            }
+        }
+        if (km != 0) {
+            StringJoiner sj = new StringJoiner(" ");
+            for (int m = km + 1; m < lm; m++) {
+                sj.add(arr[m]);
+                arr[m] = "";
+            }
+            arr[km] = "";
+            arr[lm] = result(String.valueOf(sj));
+            // 计算数组剩余运算符和数字
+            int number = 0;
+            for (String string : arr) {
+                if (!Objects.equals(string, "")) {
+                    number++;
+                }
+            }
+
+            // 新建数组存储剩余运算符和数字
+            lsArr = new String[number];
+            int n = 0;
+            for (String s : arr) {
+                if (!Objects.equals(s, "")) {
+                    lsArr[n] = s;
+                    n++;
+                }
+            }
+        }
+        lsArr = arr;
 
         for (int oi = 0; oi < operaArr.length; oi += 2) {
 
@@ -122,7 +167,7 @@ public class ResultComputation {
 
         }
         // System.out.println(Simplify(arr[arr.length - 2]));
-        return Simplify(arr[arr.length - 2]);
+        return Simplify(arr[arr.length - 1]);
     }
 
     public static String Simplify(String str) {

@@ -16,7 +16,7 @@ public class ProblemAnalysis {
     public static final String MUL = "×";
     public static final String DIV = "÷";
     public static final String[] OPERATOR = {ADD, SUB, MUL, DIV};
-    public static final String EQU = " = ";
+    public static final String EQU = "=";
     public static final String SLA = "/";
     public static final String APO = "'";
     public static final ArrayList<String> resArr = new ArrayList<>();
@@ -25,7 +25,7 @@ public class ProblemAnalysis {
     public static void create(int loop, int scope) throws IOException {
         for (int i = 0; i < loop; i++) {
             Random random = new Random();
-            StringJoiner sj = new StringJoiner(" ", "", EQU);
+            StringJoiner sj = new StringJoiner(" ", "", " " + EQU + " ");
 
             // 生成随机数1
             int num1 = random.nextInt(scope);
