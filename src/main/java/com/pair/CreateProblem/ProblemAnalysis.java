@@ -4,10 +4,7 @@ import com.pair.AnswerCheck.ResultComputation;
 import com.pair.ReadWriteUtils.OutputFile;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Random;
-import java.util.StringJoiner;
+import java.util.*;
 
 public class ProblemAnalysis {
 
@@ -19,6 +16,8 @@ public class ProblemAnalysis {
     public static final String EQU = "=";
     public static final String SLA = "/";
     public static final String APO = "'";
+    public static final String LEF = "(";
+    public static final String RIG = ")";
     public static final ArrayList<String> resArr = new ArrayList<>();
     public static final ArrayList<String> proArr = new ArrayList<>();
 
@@ -27,6 +26,9 @@ public class ProblemAnalysis {
             Random random = new Random();
             StringJoiner sj = new StringJoiner(" ", "", " " + EQU + " ");
 
+            boolean flag = false;
+            boolean flag0 = false;
+
             // 生成随机数1
             int num1 = random.nextInt(scope);
             int n20 = random.nextInt(9) + 1;
@@ -34,7 +36,13 @@ public class ProblemAnalysis {
 
             int n30 = n10 + num1 * n20;
 
+            if (random.nextInt(3) == 0) {
+                flag = true;
+                sj.add(LEF);
+            }
+
             sj.add(ResultComputation.Simplify(n30 + SLA + n20));
+
 
             for (int j = 0; j < random.nextInt(3) + 1; j++) {
                 // 随机选择运算符
@@ -51,16 +59,38 @@ public class ProblemAnalysis {
                 // 真分数转假分数，调用函数转真分数同时化简
                 String str = ResultComputation.Simplify(n3 + SLA + n2);
 
-                sj.add(opera).add(str);
+                sj.add(opera);
+
+                if (random.nextInt(3) == 0 && !flag) {
+                    flag = true;
+                    sj.add(LEF);
+                }
+
+                sj.add(str);
+
+                if (random.nextInt(3) == 0 && flag && !flag0) {
+                    flag0 = true;
+                    sj.add(RIG);
+                }
+            }
+            if (flag && !flag0) sj.add(RIG);
+
+            String pro = sj.toString();
+            String[] pA = pro.split(" ");
+            if (Objects.equals(pA[0], LEF) && Objects.equals(pA[pA.length - 2], RIG))
+                pro = pro.replace(LEF + " ", "").replace(" " + RIG, "");
+            for (int n = 0; n < pA.length; n++) {
+                if (Objects.equals(pA[n], LEF) && Objects.equals(pA[n + 2], RIG))
+                    pro = pro.replace(LEF + " ", "").replace(" " + RIG, "");
             }
 
-            String result = ResultComputation.result(String.valueOf(sj));
-            System.out.println("题目为：" + sj);
+            System.out.println("题目为：" + pro);
+            String result = ResultComputation.result(pro);
             System.out.println("结果为：" + result);
             if (Integer.parseInt(result.split("['/]")[0]) < 0) create(1, scope);
             else if (ProblemCheck.CheckRes(resArr.toArray(new String[0]), result)) create(1, scope);
             else {
-                proArr.add(String.valueOf(sj));
+                proArr.add(pro);
                 resArr.add(result);
             }
 

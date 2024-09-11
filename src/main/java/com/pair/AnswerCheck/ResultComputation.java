@@ -33,20 +33,20 @@ public class ResultComputation {
         }
         lsArr = arr;
 
-        int km = 0, lm = 0;
+        int km = -1, lm = -1;
         for (int k = 0; k < arr.length; k++) {
-            if (Objects.equals(arr[k], "(")) {
+            if (Objects.equals(arr[k], LEF)) {
                 km = k;
                 break;
             }
         }
         for (int l = km + 1; l < arr.length; l++) {
-            if (Objects.equals(arr[l], ")")) {
+            if (Objects.equals(arr[l], RIG)) {
                 lm = l;
                 break;
             }
         }
-        if (km != 0) {
+        if (km != -1 && lm != -1) {
             StringJoiner sj = new StringJoiner(" ");
             for (int m = km + 1; m < lm; m++) {
                 sj.add(arr[m]);
@@ -71,8 +71,23 @@ public class ResultComputation {
                     n++;
                 }
             }
+            arr = lsArr;
+            // 解析数字，由真分数转假分数
+            for (int k = 0; k < arr.length; k++) {
+                String[] ar = arr[k].split(APO);
+                if (ar.length != 1
+                        && !Objects.equals(ar[0], operaArr[0])
+                        && !Objects.equals(ar[0], operaArr[1])
+                        && !Objects.equals(ar[0], operaArr[2])
+                        && !Objects.equals(ar[0], operaArr[3])
+                ) {
+                    String[] ar2 = ar[1].split(SLA);
+                    ar[0] = String.valueOf(Integer.parseInt(ar[0]) * Integer.parseInt(ar2[1]));
+                    arr[k] = Integer.parseInt(ar[0]) + Integer.parseInt(ar2[0]) + SLA + ar2[1];
+                }
+            }
+            lsArr = arr;
         }
-        lsArr = arr;
 
         for (int oi = 0; oi < operaArr.length; oi += 2) {
 
@@ -167,7 +182,9 @@ public class ResultComputation {
 
         }
         // System.out.println(Simplify(arr[arr.length - 2]));
-        return Simplify(arr[arr.length - 1]);
+        int ll = arr.length - 1;
+        if (Objects.equals(arr[ll], RIG)) ll = arr.length - 2;
+        return Simplify(arr[ll]);
     }
 
     public static String Simplify(String str) {

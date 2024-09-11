@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="题目重复再重新出题功能">
+    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="新增括号优先运算">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Answers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Answers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercises.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Exercises.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grade.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Grade.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/pair/AnswerCheck/ResultComputationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pair/AnswerCheck/ResultComputationTest.java" afterDir="false" />
@@ -84,7 +87,7 @@
       <recent name="com.pair.AnswerCheck" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ResultComputationTest.result">
+  <component name="RunManager" selected="应用程序.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pair.Main" />
       <module name="pairItem" />
@@ -185,7 +188,7 @@
       <workItem from="1725925631912" duration="11727000" />
       <workItem from="1725957068449" duration="771000" />
       <workItem from="1725961856891" duration="744000" />
-      <workItem from="1726013265730" duration="5087000" />
+      <workItem from="1726013265730" duration="10409000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -315,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726016427607</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="新增括号优先运算">
+      <option name="closed" value="true" />
+      <created>1726018400953</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726018400953</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,6 +348,7 @@
     <MESSAGE value="抛命令行范围未输入异常" />
     <MESSAGE value="代码整理" />
     <MESSAGE value="题目重复再重新出题功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="题目重复再重新出题功能" />
+    <MESSAGE value="新增括号优先运算" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增括号优先运算" />
   </component>
 </project>
