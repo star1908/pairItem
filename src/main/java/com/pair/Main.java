@@ -10,7 +10,7 @@ import java.util.Objects;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        String[] argsArr = new String[]{"", "", "", ""};
+        String[] argsArr = new String[]{"20", "10", "Exercises.txt", "Answers.txt"};
         argsArr[0] = "1";
 
         for (int i = 0; i < args.length; i += 2) {
@@ -37,7 +37,8 @@ public class Main {
 
         if (!Objects.equals(argsArr[1], ""))
             ProblemAnalysis.create(Integer.parseInt(argsArr[0]), Integer.parseInt(argsArr[1]));
-        else throw new InsufficientParametersException("命令行未输入数值范围，请加上例如“ -r 10 ”再次运行程序。");
+        else if (Objects.equals(argsArr[2], "") && Objects.equals(argsArr[3], ""))
+            throw new InsufficientParametersException("命令行未输入数值范围，请加上例如“ -r 10 ”再次运行程序。");
 
         ResultCheck.Check(argsArr[2], argsArr[3]);
     }

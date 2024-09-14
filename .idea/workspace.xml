@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="新增括号优先运算">
+    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="新增题目随机生成括号">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Answers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Answers.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Exercises.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Exercises.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Grade.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Grade.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/pair/AnswerCheck/ResultComputationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pair/AnswerCheck/ResultComputationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +91,7 @@
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pair.Main" />
       <module name="pairItem" />
-      <option name="PROGRAM_PARAMETERS" value="-n 10 -r 10 -e Exercises.txt -a Answers.txt" />
+      <option name="PROGRAM_PARAMETERS" value="-n 1000 -r 10 -e Exercises.txt -a Answers.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.pair.*" />
@@ -188,7 +188,10 @@
       <workItem from="1725925631912" duration="11727000" />
       <workItem from="1725957068449" duration="771000" />
       <workItem from="1725961856891" duration="744000" />
-      <workItem from="1726013265730" duration="10409000" />
+      <workItem from="1726013265730" duration="12199000" />
+      <workItem from="1726037099481" duration="4031000" />
+      <workItem from="1726052029440" duration="21000" />
+      <workItem from="1726208279371" duration="2835000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -326,7 +329,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726018400953</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="新增题目随机生成括号">
+      <option name="closed" value="true" />
+      <created>1726026956182</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726026956183</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +360,7 @@
     <MESSAGE value="代码整理" />
     <MESSAGE value="题目重复再重新出题功能" />
     <MESSAGE value="新增括号优先运算" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增括号优先运算" />
+    <MESSAGE value="新增题目随机生成括号" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增题目随机生成括号" />
   </component>
 </project>

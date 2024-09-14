@@ -193,6 +193,7 @@ public class ResultComputation {
         if (strArr.length != 1) {
             if (Integer.parseInt(strArr[0]) < 0) return "-1";
             // 计算自然数
+            if (Integer.parseInt(strArr[1]) == 0) return "-1";
             int num0 = Integer.parseInt(strArr[0]) / Integer.parseInt(strArr[1]);
 
             strArr[0] = String.valueOf(Integer.parseInt(strArr[0]) % Integer.parseInt(strArr[1]));
@@ -213,8 +214,8 @@ public class ResultComputation {
             String res = num0 + APO + num1 + SLA + num2;
             // 结果分子为零时，仅返回自然数部分
             if (Integer.parseInt(strArr[0]) / x == 0) res = String.valueOf(num0);
-            // 自然数为零时，返回分数部分
-            if (num0 == 0) res = num1 + SLA + num2;
+                // 自然数为零时，返回分数部分
+            else if (num0 == 0) res = num1 + SLA + num2;
 
             return res;
         }
