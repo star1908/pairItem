@@ -128,6 +128,8 @@ public class ResultComputation {
                             if (strArr1.length != 1)
                                 arr[i - 1] = String.valueOf(Integer.parseInt(arr[i - 1]) * Integer.parseInt(strArr1[1]));
                             arr[i + 1] = String.valueOf(Integer.parseInt(arr[i - 1]) - Integer.parseInt(arr[i + 1]));
+                            // TODO 减法可能为负数，需判断
+                            if (Integer.parseInt(arr[i + 1]) < 0) return "-1";
                             break;
                     }
 
@@ -222,7 +224,7 @@ public class ResultComputation {
         // 若有不为自然数
         if (strArr.length != 1) {
             // 若分子小于零或分母为0，返回-1
-            if (Integer.parseInt(strArr[0]) < 0) return "-1";
+            // if (Integer.parseInt(strArr[0]) < 0) return "-1";
             if (Integer.parseInt(strArr[1]) == 0) return "-1";
             // 计算假分数的自然数部分
             int num0 = Integer.parseInt(strArr[0]) / Integer.parseInt(strArr[1]);
