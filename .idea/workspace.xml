@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="新增题目随机生成括号">
+    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="bug修复">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Answers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Answers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercises.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Exercises.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grade.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Grade.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/CreateProblem/ProblemCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pair/AnswerCheck/ResultComputationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pair/AnswerCheck/ResultComputationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +55,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/大学资料/大三/软件工程项目/pairItem/src/main/java/com/pair",
@@ -64,6 +64,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "actions.on.save",
     "vue.rearranger.settings.migration": "true",
     "应用程序.Main.executor": "Run"
@@ -192,6 +195,8 @@
       <workItem from="1726037099481" duration="4031000" />
       <workItem from="1726052029440" duration="21000" />
       <workItem from="1726208279371" duration="2835000" />
+      <workItem from="1726357233957" duration="385000" />
+      <workItem from="1726366608539" duration="2346000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -337,7 +342,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726026956183</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="bug修复">
+      <option name="closed" value="true" />
+      <created>1726357257687</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1726357257687</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,6 +374,7 @@
     <MESSAGE value="题目重复再重新出题功能" />
     <MESSAGE value="新增括号优先运算" />
     <MESSAGE value="新增题目随机生成括号" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增题目随机生成括号" />
+    <MESSAGE value="bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug修复" />
   </component>
 </project>

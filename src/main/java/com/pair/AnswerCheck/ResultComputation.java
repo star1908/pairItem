@@ -7,32 +7,28 @@ import java.util.StringJoiner;
 import static com.pair.CreateProblem.ProblemAnalysis.*;
 
 public class ResultComputation {
+    // 备用数组方便操作
     public static String[] lsArr = new String[0];
 
+    /**
+     * 接受算式并返回计算结果
+     *
+     * @param opera 算式字符串
+     * @return 字符串结果
+     */
     public static String result(String opera) {
         // 分割字符串
         String[] arr = opera.split(" ");
-
+        // 删去算式的尾部等于号
         if (Objects.equals(arr[arr.length - 1], EQU)) arr = Arrays.copyOf(arr, arr.length - 1);
 
+        // 定义数组，先乘除后加减
         String[] operaArr = new String[]{MUL, DIV, ADD, SUB};
 
         // 解析数字，由真分数转假分数
-        for (int k = 0; k < arr.length; k++) {
-            String[] ar = arr[k].split(APO);
-            if (ar.length != 1
-                    && !Objects.equals(ar[0], operaArr[0])
-                    && !Objects.equals(ar[0], operaArr[1])
-                    && !Objects.equals(ar[0], operaArr[2])
-                    && !Objects.equals(ar[0], operaArr[3])
-            ) {
-                String[] ar2 = ar[1].split(SLA);
-                ar[0] = String.valueOf(Integer.parseInt(ar[0]) * Integer.parseInt(ar2[1]));
-                arr[k] = Integer.parseInt(ar[0]) + Integer.parseInt(ar2[0]) + SLA + ar2[1];
-            }
-        }
-        lsArr = arr;
+        FractionalConversion(arr, operaArr);
 
+        // 循环算式数组，记录左右括号的位置
         int km = -1, lm = -1;
         for (int k = 0; k < arr.length; k++) {
             if (Objects.equals(arr[k], LEF)) {
@@ -46,6 +42,7 @@ public class ResultComputation {
                 break;
             }
         }
+        // 如果有左右括号
         if (km != -1 && lm != -1) {
             StringJoiner sj = new StringJoiner(" ");
             for (int m = km + 1; m < lm; m++) {
@@ -53,7 +50,9 @@ public class ResultComputation {
                 arr[m] = "";
             }
             arr[km] = "";
+            // 调用自身计算将括号内算式
             arr[lm] = result(String.valueOf(sj));
+
             // 计算数组剩余运算符和数字
             int number = 0;
             for (String string : arr) {
@@ -62,7 +61,7 @@ public class ResultComputation {
                 }
             }
 
-            // 新建数组存储剩余运算符和数字
+            // 重新赋值数组存储剩余运算符和数字
             lsArr = new String[number];
             int n = 0;
             for (String s : arr) {
@@ -73,25 +72,15 @@ public class ResultComputation {
             }
             arr = lsArr;
             // 解析数字，由真分数转假分数
-            for (int k = 0; k < arr.length; k++) {
-                String[] ar = arr[k].split(APO);
-                if (ar.length != 1
-                        && !Objects.equals(ar[0], operaArr[0])
-                        && !Objects.equals(ar[0], operaArr[1])
-                        && !Objects.equals(ar[0], operaArr[2])
-                        && !Objects.equals(ar[0], operaArr[3])
-                ) {
-                    String[] ar2 = ar[1].split(SLA);
-                    ar[0] = String.valueOf(Integer.parseInt(ar[0]) * Integer.parseInt(ar2[1]));
-                    arr[k] = Integer.parseInt(ar[0]) + Integer.parseInt(ar2[0]) + SLA + ar2[1];
-                }
-            }
-            lsArr = arr;
+            FractionalConversion(arr, operaArr);
         }
 
+        // 循环计算，循环两次，第一次先乘除，第二次再加减
         for (int oi = 0; oi < operaArr.length; oi += 2) {
 
+            // 遍历算式数组
             for (int i = 0; i < arr.length; i++) {
+                // 若运算符为乘除/加减
                 if (Objects.equals(arr[i], operaArr[oi]) || Objects.equals(arr[i], operaArr[oi + 1])) {
                     String[] strArr;
                     String[] strArr1;
@@ -182,20 +171,62 @@ public class ResultComputation {
 
         }
         // System.out.println(Simplify(arr[arr.length - 2]));
+        // 取最后的假分数数值
         int ll = arr.length - 1;
         if (Objects.equals(arr[ll], RIG)) ll = arr.length - 2;
+        // 计算化简真分数并返回
         return Simplify(arr[ll]);
     }
 
+    /**
+     * 计算算式数组，将真分数转假分数
+     *
+     * @param arr      要转换的算式数组
+     * @param operaArr 运算符数组
+     */
+    private static void FractionalConversion(String[] arr, String[] operaArr) {
+        // 遍历算式数组
+        for (int k = 0; k < arr.length; k++) {
+            // 切割自然数与分数
+            String[] ar = arr[k].split(APO);
+            // 若有分数且不为运算符
+            if (ar.length != 1
+                    && !Objects.equals(ar[0], operaArr[0])
+                    && !Objects.equals(ar[0], operaArr[1])
+                    && !Objects.equals(ar[0], operaArr[2])
+                    && !Objects.equals(ar[0], operaArr[3])
+                    && !Objects.equals(ar[0], LEF)
+                    && !Objects.equals(ar[0], RIG)
+            ) {
+                // 分割分子与分母
+                String[] ar2 = ar[1].split(SLA);
+                // 将自然数乘分母
+                ar[0] = String.valueOf(Integer.parseInt(ar[0]) * Integer.parseInt(ar2[1]));
+                // 重新拼接为假分数
+                arr[k] = Integer.parseInt(ar[0]) + Integer.parseInt(ar2[0]) + SLA + ar2[1];
+            }
+        }
+        // 存储假分数数组
+        lsArr = arr;
+    }
+
+    /**
+     * 计算函数，返回真分数
+     *
+     * @param str 未化简假分数数值
+     * @return 真分数字符串
+     */
     public static String Simplify(String str) {
         String[] strArr = str.split(SLA);
 
+        // 若有不为自然数
         if (strArr.length != 1) {
+            // 若分子小于零或分母为0，返回-1
             if (Integer.parseInt(strArr[0]) < 0) return "-1";
-            // 计算自然数
             if (Integer.parseInt(strArr[1]) == 0) return "-1";
+            // 计算假分数的自然数部分
             int num0 = Integer.parseInt(strArr[0]) / Integer.parseInt(strArr[1]);
-
+            // 计算假分数的小数部分
             strArr[0] = String.valueOf(Integer.parseInt(strArr[0]) % Integer.parseInt(strArr[1]));
 
             // 求最大公因数

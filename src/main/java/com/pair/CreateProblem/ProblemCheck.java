@@ -5,6 +5,11 @@ import java.util.Objects;
 import static com.pair.CreateProblem.ProblemAnalysis.MUL;
 
 public class ProblemCheck {
+    /**
+     * TODO 检查问题不一致，达到不重复问题的效果（未实现）
+     *
+     * @param arr 算式数组
+     */
     public static void CheckPro(String[] arr) {
         int num = 0;
         int flag;
