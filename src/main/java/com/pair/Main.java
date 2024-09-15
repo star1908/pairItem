@@ -15,7 +15,7 @@ public class Main {
      */
     public static void main(String[] args) throws IOException {
 
-        String[] argsArr = new String[]{"20", "10", "Exercises.txt", "Answers.txt"};
+        String[] argsArr = new String[]{"", "", "", ""};
         argsArr[0] = "1";
 
         // 遍历命令行参数，匹配参数类型

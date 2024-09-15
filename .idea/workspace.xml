@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="注释">
+    <list default="true" id="e85e0e1f-f942-4a4f-a724-2ca2b0ef9b58" name="更改" comment="优化计算过程不会有负数出现">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Answers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Answers.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Exercises.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Exercises.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Grade.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Grade.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/AnswerCheck/ResultComputation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pair/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pair/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true",
-    "应用程序.Main.executor": "JProfiler"
+    "应用程序.Main.executor": "Run"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -93,7 +94,7 @@
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pair.Main" />
       <module name="pairItem" />
-      <option name="PROGRAM_PARAMETERS" value="-n 10000 -r 10 -e Exercises.txt -a Answers.txt" />
+      <option name="PROGRAM_PARAMETERS" value="-e Exercises.txt -a Answers.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.pair.*" />
@@ -195,7 +196,7 @@
       <workItem from="1726052029440" duration="21000" />
       <workItem from="1726208279371" duration="2835000" />
       <workItem from="1726357233957" duration="385000" />
-      <workItem from="1726366608539" duration="4899000" />
+      <workItem from="1726366608539" duration="6215000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -357,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726368969631</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="优化计算过程不会有负数出现">
+      <option name="closed" value="true" />
+      <created>1726384245849</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1726384245849</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,6 +392,7 @@
     <MESSAGE value="新增题目随机生成括号" />
     <MESSAGE value="bug修复" />
     <MESSAGE value="注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="注释" />
+    <MESSAGE value="优化计算过程不会有负数出现" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化计算过程不会有负数出现" />
   </component>
 </project>

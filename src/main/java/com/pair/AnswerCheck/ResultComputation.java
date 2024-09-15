@@ -128,7 +128,7 @@ public class ResultComputation {
                             if (strArr1.length != 1)
                                 arr[i - 1] = String.valueOf(Integer.parseInt(arr[i - 1]) * Integer.parseInt(strArr1[1]));
                             arr[i + 1] = String.valueOf(Integer.parseInt(arr[i - 1]) - Integer.parseInt(arr[i + 1]));
-                            // TODO 减法可能为负数，需判断
+                            // 减法可能为负数，需判断
                             if (Integer.parseInt(arr[i + 1]) < 0) return "-1";
                             break;
                     }
